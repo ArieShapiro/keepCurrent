@@ -15,8 +15,8 @@ axios
       render() {
         return (
           <ul>
-            {res.data.map((film: any) => (
-              <li>
+            {res.data.map((film: any, index: number) => (
+              <li  key={index}>
 
                 <p>
                   <b>Title: </b>{film.title}
