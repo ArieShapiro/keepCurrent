@@ -2,7 +2,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import "./index.css";
 import axios from "axios";
-// import { any } from 'prop-types';
+
+
+
 
 axios
   .get("https://data.sfgov.org/resource/wwmu-gmzc.json")
@@ -15,15 +17,27 @@ axios
           <ul>
             {res.data.map((film: any) => (
               <li>
+
                 <p>
                   <b>Title: </b>{film.title}
                 </p>
+
                 <p>
                   <b>Year: </b>{film.release_year}
                 </p>
+
                 <p>
                   <b>Producer: </b>{film.director}
                 </p>
+
+                <p>
+                  <b>Writer: </b>{film.writer}
+                </p>
+
+                <p>
+                  <b>Location: </b>{film.locations}
+                </p>
+
               </li>
             ))}
           </ul>
